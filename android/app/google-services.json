@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "553459087272",
+    "project_id": "stockscreener-dc9df",
+    "storage_bucket": "stockscreener-dc9df.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553459087272:android:69fb5322daa458f1578f9d",
+        "android_client_info": {
+          "package_name": "com.example.sneaker_puma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "553459087272-k0mmsk6eefunk22rbtbu0n06pivl83lj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sneaker_puma",
+            "certificate_hash": "183d87fa61c9f0b9ff4328aff2c1cb436403b907"
+          }
+        },
+        {
+          "client_id": "553459087272-i38nha8d9bom9f2te4kr8k0382r2igom.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDN17Je2bkyDJIZaGN_K9opV0YzWfsBZaI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "553459087272-i38nha8d9bom9f2te4kr8k0382r2igom.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "553459087272-vmqmdb155aqii6q9jgpn55o67cmti3ei.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.sneakerPuma"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553459087272:android:7d68d0cd04b55595578f9d",
+        "android_client_info": {
+          "package_name": "com.example.stockscreener"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "553459087272-i38nha8d9bom9f2te4kr8k0382r2igom.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDN17Je2bkyDJIZaGN_K9opV0YzWfsBZaI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "553459087272-i38nha8d9bom9f2te4kr8k0382r2igom.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "553459087272-vmqmdb155aqii6q9jgpn55o67cmti3ei.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.sneakerPuma"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

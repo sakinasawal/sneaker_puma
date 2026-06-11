@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sneaker_puma/components/bottom_nav_bar.dart';
 import 'package:sneaker_puma/pages/cart_page.dart';
@@ -11,7 +12,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   // this selected index is to control the bottom nav bar
   int _selectedIndex = 0;
 
@@ -99,16 +99,21 @@ class _HomePageState extends State<HomePage> {
 
             const Spacer(),
 
-            const Padding(
-              padding: EdgeInsets.only(left: 25.0, bottom: 25),
-              child: ListTile(
-                leading: Icon(
-                  Icons.logout, 
-                  color: Colors.white
-                ),
-                title: Text(
-                  'Logout',
-                  style: TextStyle(color: Colors.white)
+            Padding(
+              padding: const EdgeInsets.only(left: 25.0, bottom: 25),
+              child: GestureDetector(
+                onTap: () async {
+                  await FirebaseAuth.instance.signOut();
+                },
+                child: const ListTile(
+                  leading: Icon(
+                    Icons.logout, 
+                    color: Colors.white
+                  ),
+                  title: Text(
+                    'Logout',
+                    style: TextStyle(color: Colors.white)
+                  ),
                 ),
               ),
             ),

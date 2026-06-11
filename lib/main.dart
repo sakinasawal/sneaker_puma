@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sneaker_puma/pages/intro_page.dart';
-
+import 'package:sneaker_puma/pages/login_page.dart';
+import 'package:sneaker_puma/pages/signup_page.dart';
+import 'package:sneaker_puma/pages/home_page.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:sneaker_puma/services/auth_service.dart';
+import 'firebase_options.dart';
 import 'models/cart.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MyApp());
 }
 
@@ -13,12 +23,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context){
-    return ChangeNotifierProvider(
-      create: (context) => Cart(),
-      builder: (context, child) => const MaterialApp(
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => Cart()),
+      ],
+      builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: IntroPage(),
-      ) ,
+        home: const AuthService(),
+        routes: {
+          '/login': (context) => const LoginPage(),
+          '/signup': (context) => const SignupPage(),
+          '/home': (context) => const HomePage(),
+        },
+      ),
     );
   }
 }

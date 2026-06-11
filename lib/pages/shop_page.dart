@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sneaker_puma/components/shoe_tile.dart';
@@ -12,7 +13,8 @@ class ShopPage extends StatefulWidget {
 }
 
 class _ShopPageState extends State<ShopPage> {
-
+  
+  final user = FirebaseAuth.instance.currentUser!;
   // add shoe to cart
   void addShoeToCart(Shoe shoe){
     Provider.of<Cart>(context, listen: false).addItemToCart(shoe);
@@ -32,6 +34,8 @@ class _ShopPageState extends State<ShopPage> {
     return Consumer<Cart>(
       builder: (context, value, child) => Column(
         children:[
+
+          // Search bar
           Container(
             padding: const EdgeInsets.all(12),
             margin: const EdgeInsets.symmetric(horizontal: 20),
@@ -47,8 +51,8 @@ class _ShopPageState extends State<ShopPage> {
 
           // message
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 25.0),
-            child: Text('Everyone flies..some fly longer than others', style: TextStyle(color: Colors.grey[600]),
+            padding: const EdgeInsets.symmetric(vertical: 25.0, horizontal: 20),
+            child: Text('Hi ${user.email}, everyone flies..some fly longer than others', style: TextStyle(color: Colors.grey[600]),
             ),
           ),
 
