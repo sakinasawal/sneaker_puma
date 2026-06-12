@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:sneaker_puma/models/shoe.dart';
 
 class ShoeTile extends StatelessWidget {
-  Shoe shoe;
-  void Function()? onTap;
+  final Shoe shoe;
+  final void Function()? onTap;
 
-  ShoeTile({
+  const ShoeTile({
     super.key,
     required this.shoe,
     required this.onTap

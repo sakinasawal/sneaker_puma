@@ -13,11 +13,7 @@ class AuthGoogleService {
       
       // begin interactive sign in process
       final GoogleSignInAccount googleUser = await googleSignIn.authenticate();
-      developer.log(
-        'Google User: ${googleUser.email}',
-        name: 'AuthGoogleService',
-      );
-
+      
       // obtain auth details from the request
       final GoogleSignInAuthentication googleAuth = googleUser.authentication;
       
@@ -29,7 +25,7 @@ class AuthGoogleService {
       // sign in to firebase with the google user credential
       final result = await _firebaseAuth.signInWithCredential(credential);
       developer.log(  
-        'Firebase Sign In Success: ${result.user?.uid}',
+        'Firebase Sign In Success — Firebase email: ${result.user?.email}, uid: ${result.user?.uid}',
         name: 'AuthGoogleService',
       );
       

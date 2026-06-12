@@ -4,9 +4,9 @@ import 'package:sneaker_puma/models/cart.dart';
 import 'package:sneaker_puma/models/shoe.dart';
 
 class CartItem extends StatefulWidget {
-  Shoe shoe;
+  final Shoe shoe;
 
-  CartItem({ 
+  const CartItem({ 
     super.key,
     required this.shoe
   });
