@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sneaker_puma/components/square_tile.dart';
+import 'package:sneaker_puma/services/auth_apple_service.dart';
 import 'package:sneaker_puma/services/auth_google_service.dart';
 
 class LoginPage extends StatefulWidget {
@@ -216,14 +217,30 @@ class _LoginPageState extends State<LoginPage> {
                   children: [
                     // google button
                     SquareTile(
-                      onTap: () => AuthGoogleService().signInWithGoogle(),
+                      onTap: () async {
+                        try {
+                          await AuthGoogleService().signInWithGoogle();
+                        } catch (e) {
+                          setState(() {
+                            errorMessage = 'Google sign-in failed. Please try again.';
+                          });
+                        }
+                      },
                       imagePath: 'lib/images/google.png'),
 
                     SizedBox(width: 25),
 
                     // apple button
                     SquareTile(
-                      onTap: () {},
+                      onTap: () async {
+                        try {
+                          await AuthAppleService().signInWithApple();
+                        } catch (e) {
+                          setState(() {
+                            errorMessage = 'Apple sign-in failed: ${e.toString()}';
+                          });
+                        }
+                      },
                       imagePath: 'lib/images/apple.png'),
                   ],
                 ),

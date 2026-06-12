@@ -7,6 +7,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:sneaker_puma/services/auth_service.dart';
 import 'firebase_options.dart';
 import 'models/cart.dart';
+import 'dart:developer' as developer;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,6 +15,15 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  FlutterError.onError = (FlutterErrorDetails details) {
+    developer.log(
+      'Flutter Error',
+      error: details.exception,
+      stackTrace: details.stack,
+      name: 'GLOBAL',
+    );
+  };
 
   runApp(const MyApp());
 }

@@ -39,10 +39,10 @@
               "client_type": 3
             },
             {
-              "client_id": "553459087272-vmqmdb155aqii6q9jgpn55o67cmti3ei.apps.googleusercontent.com",
+              "client_id": "553459087272-828p0mmab7iupoubu7kij4snfa8vluu0.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.sneakerPuma"
+                "bundle_id": "com.appleauth.sneakerpuma"
               }
             }
           ]
@@ -75,10 +75,10 @@
               "client_type": 3
             },
             {
-              "client_id": "553459087272-vmqmdb155aqii6q9jgpn55o67cmti3ei.apps.googleusercontent.com",
+              "client_id": "553459087272-828p0mmab7iupoubu7kij4snfa8vluu0.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.example.sneakerPuma"
+                "bundle_id": "com.appleauth.sneakerpuma"
               }
             }
           ]

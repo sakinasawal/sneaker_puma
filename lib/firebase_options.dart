@@ -56,22 +56,24 @@ class DefaultFirebaseOptions {
     projectId: 'stockscreener-dc9df',
     storageBucket: 'stockscreener-dc9df.firebasestorage.app',
   );
-
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyAiMIcNWeO7v-58u0zHgBfzxoX-H0aOsPI',
     appId: '1:553459087272:ios:ed947df3ee7a987a578f9d',
     messagingSenderId: '553459087272',
     projectId: 'stockscreener-dc9df',
     storageBucket: 'stockscreener-dc9df.firebasestorage.app',
+    androidClientId: '553459087272-k0mmsk6eefunk22rbtbu0n06pivl83lj.apps.googleusercontent.com',
+    iosClientId: '553459087272-vmqmdb155aqii6q9jgpn55o67cmti3ei.apps.googleusercontent.com',
     iosBundleId: 'com.example.sneakerPuma',
   );
-
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyAiMIcNWeO7v-58u0zHgBfzxoX-H0aOsPI',
     appId: '1:553459087272:ios:ed947df3ee7a987a578f9d',
     messagingSenderId: '553459087272',
     projectId: 'stockscreener-dc9df',
     storageBucket: 'stockscreener-dc9df.firebasestorage.app',
+    androidClientId: '553459087272-k0mmsk6eefunk22rbtbu0n06pivl83lj.apps.googleusercontent.com',
+    iosClientId: '553459087272-vmqmdb155aqii6q9jgpn55o67cmti3ei.apps.googleusercontent.com',
     iosBundleId: 'com.example.sneakerPuma',
   );
 

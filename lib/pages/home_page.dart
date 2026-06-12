@@ -13,18 +13,18 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   // this selected index is to control the bottom nav bar
-  int _selectedIndex = 0;
+  int selectedIndex = 0;
 
   // this method will update our selected index
   // when the user taps on the bottom bar
   void navigateBottomBar(int index){
     setState(() {
-      _selectedIndex = index;
+      selectedIndex = index;
     });
   }
 
   // pages to display 
-  final List<Widget> _pages = [
+  final List<Widget> pages = [
     // shop page
     const ShopPage(),
 
@@ -120,7 +120,7 @@ class _HomePageState extends State<HomePage> {
           ],
         )
       ),
-      body: _pages[_selectedIndex],
+      body: pages[selectedIndex],
     );
   }
 }

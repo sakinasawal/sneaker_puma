@@ -15,6 +15,7 @@ class ShopPage extends StatefulWidget {
 class _ShopPageState extends State<ShopPage> {
   
   final user = FirebaseAuth.instance.currentUser!;
+  
   // add shoe to cart
   void addShoeToCart(Shoe shoe){
     Provider.of<Cart>(context, listen: false).addItemToCart(shoe);
