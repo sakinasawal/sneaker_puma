@@ -14,10 +14,6 @@ class AuthAppleService {
           AppleIDAuthorizationScopes.fullName,
         ],
       );
-      developer.log(  
-        'Apple User: ${appleIdCredential.email}',
-        name: 'AuthAppleService',
-      );
 
       final oAuthCredential = OAuthProvider("apple.com").credential(
         idToken: appleIdCredential.identityToken,
@@ -30,7 +26,7 @@ class AuthAppleService {
 
       final result = await _firebaseAuth.signInWithCredential(oAuthCredential);
       developer.log(
-        'Apple Sign-In Success: ${result.user?.uid}',
+        'Apple Sign-In Success — Firebase email: ${result.user?.email}, uid: ${result.user?.uid}',
         name: 'AuthAppleService',
       );
       return result;
