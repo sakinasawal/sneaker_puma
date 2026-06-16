@@ -1,8 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sneaker_puma/components/bottom_nav_bar.dart';
-import 'package:sneaker_puma/pages/cart_page.dart';
-import 'package:sneaker_puma/pages/shop_page.dart';
+import 'package:sneaker_puma/ui/operator/widgets/operator_page.dart';
+import 'package:sneaker_puma/ui/pages/cart_page.dart';
+import 'package:sneaker_puma/ui/contract/widgets/contract_page.dart';
+import 'package:sneaker_puma/ui/pages/shop_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -94,6 +96,40 @@ class _HomePageState extends State<HomePage> {
                   'About',
                   style: TextStyle(color: Colors.white)
                 ),
+              ),
+            ),
+
+            Padding(
+              padding: EdgeInsets.only(left: 25.0),
+              child: ListTile(
+                leading: Icon(Icons.description, color: Colors.white),
+                title: Text(
+                  'Contracts',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const ContractPage()),
+                  );
+                },
+              ),
+            ),
+
+            Padding(
+              padding: EdgeInsets.only(left: 25.0),
+              child: ListTile(
+                leading: Icon(Icons.description, color: Colors.white),
+                title: Text(
+                  'Operators',
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const OperatorPage()),
+                  );
+                },
               ),
             ),
 

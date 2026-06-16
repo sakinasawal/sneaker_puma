@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sneaker_puma/components/cart_item.dart';
-import 'package:sneaker_puma/models/cart.dart';
-import 'package:sneaker_puma/models/shoe.dart';
+import 'package:sneaker_puma/domain/models/shoe.dart';
+import '../../domain/models/cart.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});

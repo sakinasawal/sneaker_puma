@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:sneaker_puma/components/square_tile.dart';
-import 'package:sneaker_puma/services/auth_apple_service.dart';
-import 'package:sneaker_puma/services/auth_google_service.dart';
+import 'package:sneaker_puma/data/services/auth_apple_service.dart';
+import 'package:sneaker_puma/data/services/auth_google_service.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
