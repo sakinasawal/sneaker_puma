@@ -119,7 +119,7 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: EdgeInsets.only(left: 25.0),
               child: ListTile(
-                leading: Icon(Icons.description, color: Colors.white),
+                leading: Icon(Icons.business, color: Colors.white),
                 title: Text(
                   'Operators',
                   style: TextStyle(color: Colors.white),

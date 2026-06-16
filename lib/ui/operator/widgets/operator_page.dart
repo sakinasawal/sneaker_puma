@@ -15,8 +15,8 @@ class _OperatorPageState extends State<OperatorPage>{
   void initState() {
     super.initState();
 
-    Future.microtask(() {
-      Provider.of<OperatorViewmodel>(context, listen: false).getOperators();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      context.read<OperatorViewmodel>().getOperators();
     });
   }
 

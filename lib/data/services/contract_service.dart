@@ -1,50 +1,39 @@
 import 'dart:convert';
 import 'dart:developer' as developer;
-import 'package:http/http.dart' as http;
 import '../../models/contract.dart';
 import '../api_service.dart';
 
 class ContractService {
 
   Future<List<Contract>> fetchContracts() async {
-    final url = Uri.parse(
-      "${ApiService.baseUrl}/v1/contracts?filter[document_type]=CONTRACT",
-    );
-
-    try {
-      developer.log("API CALL START: $url", name: "API");
-
-      final response = await http.get(
-        url,
-        headers: {
-            "Accept": ApiService.accept,
-            "Authorization":"Bearer ${ApiService.accessToken}"
-        },
-      );
-
-      developer.log("STATUS CODE: ${response.statusCode}", name: "API");
-      developer.log("HEADERS: ${response.headers}", name: "API");
-      developer.log("BODY: ${response.body}", name: "API");
+    try{
+      final response = await ApiService.get("/v1/contracts?filter[document_type]=CONTRACT");
+      developer.log("STATUS CODE: ${response.statusCode}", name: "API_RESPONSE");
+      developer.log("BODY: ${response.body}", name: "API_RESPONSE");
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
-
         final List list = data['data'];
-
         developer.log("PARSED ITEMS: ${list.length}", name: "API");
 
         return list.map((e) => Contract.fromJson(e)).toList();
+      } else if (response.statusCode != 200){
+        final body = jsonDecode(response.body);
+
+        final message = body['errors']?[0]?['detail'] ?? body['message'] ?? 'Unknown error';
+
+        developer.log("ERROR: $message", name: "API_ERROR");
+        throw Exception(message);
       } else {
         developer.log(
-          "FAILED RESPONSE: ${response.body}",
+          "REQUEST FAILED (${response.statusCode})",
           name: "API_ERROR",
         );
 
-        throw Exception(
-          "Failed ${response.statusCode}",
-        );
+        throw Exception("Failed ${response.statusCode}");
       }
-    } catch (e, stack) {
+
+    } catch (e, stack){
       developer.log(
         "EXCEPTION OCCURRED",
         error: e,
