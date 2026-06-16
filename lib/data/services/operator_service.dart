@@ -20,16 +20,21 @@ class OperatorService {
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
         final List list = data['data'];
-        developer.log("PARSED ITEMS: ${list.length}", name: "API_SUCCESS");
-        return list.map((e) => Operator.fromJson(e)).toList();
-      } else if (response.statusCode != 200) {
-        final body = jsonDecode(response.body);
 
+        developer.log("PARSED ITEMS: ${list.length}", name: "API_SUCCESS");
+
+        return list.map((e) => Operator.fromJson(e)).toList();
+
+      } else if (response.statusCode != 200) {
+
+        final body = jsonDecode(response.body);
         final message = body['errors']?[0]?['detail'] ?? body['message'] ?? 'Unknown error';
 
         developer.log("ERROR: $message", name: "API_ERROR");
+
         throw Exception(message);
       } else {
+
         developer.log(
           "REQUEST FAILED (${response.statusCode})",
           name: "API_ERROR",
