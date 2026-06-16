@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sneaker_puma/domain/models/shoe.dart';
+import 'package:sneaker_puma/models/shoe.dart';
 
 class ShoeTile extends StatelessWidget {
   final Shoe shoe;

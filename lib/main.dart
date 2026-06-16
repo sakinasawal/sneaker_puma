@@ -7,7 +7,7 @@ import 'package:sneaker_puma/ui/login/login_page.dart';
 import 'package:sneaker_puma/ui/operator/viewmodel/operator_viewmodel.dart';
 import 'package:sneaker_puma/ui/pages/signup_page.dart';
 import 'package:sneaker_puma/ui/contract/viewmodel/contract_viewmodel.dart';
-import 'domain/models/cart.dart';
+import 'models/cart.dart';
 import 'firebase_options.dart';
 import 'dart:developer' as developer;
 

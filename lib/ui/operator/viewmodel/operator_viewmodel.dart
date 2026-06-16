@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:sneaker_puma/data/services/operator_service.dart';
-import 'package:sneaker_puma/domain/models/operator.dart';
+import 'package:sneaker_puma/models/operator.dart';
 
 class OperatorViewmodel extends ChangeNotifier {
   final OperatorService apiService = OperatorService();

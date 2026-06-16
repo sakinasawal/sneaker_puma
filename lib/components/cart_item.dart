@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:sneaker_puma/domain/models/shoe.dart';
+import 'package:sneaker_puma/models/shoe.dart';
 
-import '../domain/models/cart.dart';
+import '../models/cart.dart';
 
 class CartItem extends StatefulWidget {
   final Shoe shoe;

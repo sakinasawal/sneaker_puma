@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:developer' as developer;
 import 'package:http/http.dart' as http;
-import 'package:sneaker_puma/data/model/api_service.dart';
-import '../../domain/models/operator.dart';
+import 'package:sneaker_puma/data/api_service.dart';
+import '../../models/operator.dart';
 
 class OperatorService {
   Future<List<Operator>> fetchOperators({int page = 1, int size = 15}) async {

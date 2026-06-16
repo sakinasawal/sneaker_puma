@@ -2,8 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sneaker_puma/components/shoe_tile.dart';
-import 'package:sneaker_puma/domain/models/cart.dart';
-import 'package:sneaker_puma/domain/models/shoe.dart';
+import 'package:sneaker_puma/models/cart.dart';
+import 'package:sneaker_puma/models/shoe.dart';
 
 class ShopPage extends StatefulWidget {
   const ShopPage({super.key});

@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:developer' as developer;
 import 'package:http/http.dart' as http;
-import '../../domain/models/contract.dart';
-import '../model/api_service.dart';
+import '../../models/contract.dart';
+import '../api_service.dart';
 
 class ContractService {
 

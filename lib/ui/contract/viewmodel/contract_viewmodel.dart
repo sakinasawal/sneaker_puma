@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../domain/models/contract.dart';
+import '../../../models/contract.dart';
 import '../../../data/services/contract_service.dart';
 
 class ContractViewModel extends ChangeNotifier {
